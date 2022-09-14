@@ -27,6 +27,9 @@ const bootstrap = async () => {
    */
   app.useLogger(app.get(Log4jsLogger));
 
+  // 处理跨域
+  app.enableCors();
+
   await app.listen(listenPort);
 };
 bootstrap().then(() => {
