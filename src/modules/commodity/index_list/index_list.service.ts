@@ -155,21 +155,12 @@ export class IndexListService {
         ],
       },
     });
-    // try {
-    //   const data = await this.barModel.findAll();
-    //   return (this.response = {
-    //     code: 0,
-    //     data,
-    //   });
-    // } catch (error) {
-    //   console.log(error);
-    //   return (this.response = {
-    //     code: 1,
-    //     data: '获取失败',
-    //   });
-    // }
   }
 
+  /**
+   * 类型切换
+   * @returns
+   */
   async find() {
     return (this.response = {
       code: 0,

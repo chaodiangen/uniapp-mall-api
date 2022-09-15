@@ -25,4 +25,6 @@ export class PopularPagination extends Model<PopularPagination> {
   })
   @Column
   readonly pageSize?: number;
+  @Column
+  readonly brand?: string;
 }

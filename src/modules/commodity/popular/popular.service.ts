@@ -62,7 +62,6 @@ export class PopularService {
         data: '删除成功',
       });
     } catch (error) {
-      logger.log(error);
       return (this.response = {
         code: 1,
         data: '删除失败',
