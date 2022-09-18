@@ -48,7 +48,7 @@ export class Commodity extends Model<Commodity> {
     type: String,
   })
   @Column
-  readonly mallName: string;
+  readonly brand: string;
   @ApiProperty({
     type: Number,
   })

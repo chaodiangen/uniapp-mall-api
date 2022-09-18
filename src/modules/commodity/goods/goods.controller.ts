@@ -1,5 +1,5 @@
 import { PopularPagination } from 'src/interface/popular.interface';
-import { Body, Controller, Post } from '@nestjs/common';
+import { Body, Controller, Get, Post } from '@nestjs/common';
 import { ApiOperation, ApiTags } from '@nestjs/swagger';
 import { GoodsService } from './goods.service';
 
@@ -12,12 +12,13 @@ export class GoodsController {
     summary: '搜索商品',
   })
   async search(@Body() body: PopularPagination) {
-    console.log(body);
-    return await this.goodsService.search(
-      body.pageNum,
-      body.pageSize,
-      body.name,
-      body.brand,
-    );
+    return await this.goodsService.search(body);
+  }
+  @Get('/list')
+  @ApiOperation({
+    summary: '商品分类',
+  })
+  async list() {
+    return await this.goodsService.list();
   }
 }
